@@ -1,0 +1,155 @@
+.{margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+}
+ul,ol{
+    list-style: none;
+}
+nav {
+    width: 70%;
+    background-color: #f4f4f4;
+    margin:auto;
+    font-family:font-family: 'Sevillana', cursive;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, 
+    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+nav ul li {
+    display: inline-block; 
+    position: relative;
+}
+nav ul{ 
+    text-align: center;
+}
+nav ul li a {
+    color: #333;
+    padding: 20px 40px;
+    display: block;
+    font-weight: 500px;
+    transition: 0.3s;
+    position: relative;
+    z-index: 1;
+}
+nav ul li:hover >a{
+    background-color: dodgerblue;
+    color:white
+}
+
+nav ul li a::before {
+    content: "";
+    width: 0%;
+    height: 100%;
+    background-color: red#;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: 0.3s;   
+}
+
+nav ul li:hover >a::before{
+    width: 100%;
+
+}
+nav ul li a::after{
+    content: "";
+    width: 0%;
+    height: 100%;
+    background-color: red#;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: -1;
+    transition: 0.3s;
+}
+nav ul li:hover >a::after{
+    width: 100%;
+
+}
+
+nav ul li ul{
+    position: absolute;
+    background-color: #f4f4f4;
+    padding-top: 10px 10px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+     rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+     border-top: 5px solid red;
+     opacity: 0;
+     visibility: hidden;
+     margin-top: 100px;
+     transition: 0.3s;
+     width: 200px;
+
+}
+nav ul li:hover >ul{
+    opacity: 1;
+    visibility: visible;
+    margin-top: 0px;
+}
+
+nav ul li ul li ul{
+    display: block;
+    border-bottom: 3px solid #ccc;
+}
+
+nav ul li ul li:last-child{
+    border: none;
+}
+
+nav ul li ul li ul{
+    left: 100%;
+    top: 0;   
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* .parent{
+    width: 800px;
+    background-color: #ccc;
+    margin: auto;
+    height: 500px;
+    position: relative;
+}
+.child1, .child2, .child3{
+    width: 100px;
+    height: 100px;
+    background-color: #f00;
+}
+.child2{
+    background-color: limegreen;
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    z-index: 5;
+}
+
+.child3{
+    background-color: dodgerblue;
+    position: absolute;
+    left: 100px;
+    z-index: 3;
+} */
